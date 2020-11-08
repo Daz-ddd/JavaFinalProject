@@ -1,0 +1,76 @@
+.Item {
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.img {
+	margin-top: 10px;
+}
+
+.word1 {
+	font-size: 36px;
+	font-weight: 200;
+	color: #333333;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.word2 {
+	font-size: 48px;
+	font-weight: 500;
+	color: darkgoldenrod;
+}
+
+.word3 {
+	font-size: 36px;
+	color: #A9A9A9;
+}
+
+.weekItem {
+	background-image: url(../images/helpCustomer.png);
+	width: 100%;
+}
+
+
+.yearItem {
+	background-image: url(../images/helpCustomer.png);
+	width: 100%;
+}
+
+@keyframes fade-left{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animation1 {
+	animation: fade-left;
+	animation-duration: 1.5s;
+	animation-delay: 250ms;
+	visibility: visible;
+	animation-fill-mode: both;
+}
+
+@keyframes fade-right{
+	from{
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.animation2 {
+	animation: fade-right;
+	animation-duration: 1.5s;
+	animation-delay: .25s, 100ms;
+	visibility: visible;
+}

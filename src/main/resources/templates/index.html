@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>账单详情</title>
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+		<script src="./js/animation.js"></script>
+	</head>
+	<body>
+		<div class="dayItem Item">
+			<div class="animation-control1">
+				<img src="./images/algorithm.png" alt="哦吼,出问题啦" class="img1 img">
+				<p class="word1">您今日已消费</p>
+				<p class="word2" th:text="${dayMoney}">10.56</p>
+				<p class="word3">元</p>
+			</div>
+		</div>
+		<div class="weekItem Item">
+			<div class="animation-control2">
+				<img src="./images/algorithm.png" alt="哦吼,出问题啦" class="img2 img">
+				<p class="word1">您本周已消费</p>
+				<p class="word2" th:text="${dayMoney}">90</p>
+				<p class="word3">元</p>
+			</div>
+		</div>
+
+		<div class="monthItem Item"><img src="./images/algorithm.png" alt="哦吼,出问题啦" class="img2 img">
+			<div class="animation-control3">
+				<p class="word1">您本月已消费</p>
+				<p class="word2" th:text="${dayMoney}">100.56</p>
+				<p class="word3">元</p>
+			</div>
+		</div>
+		<div class="yearItem Item"><img src="./images/algorithm.png" alt="哦吼,出问题啦" class="img2 img">
+			<div class="animation-control4">
+				<p class="word1">您今年已消费</p>
+				<p class="word2" th:text="${dayMoney}">100.56</p>
+				<p class="word3">元</p>
+			</div>
+		</div>
+	</body>
+</html>
