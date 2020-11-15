@@ -19,7 +19,7 @@ public class SessionInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2) throws Exception {
 
-        if ("/ensure".equals(arg0.getRequestURI()) || "/login".equals(arg0.getRequestURI())) {
+        if ("/ensure".equals(arg0.getRequestURI()) || "/login".equals(arg0.getRequestURI()) || "/register".equals(arg0.getRequestURI())|| "/first".equals(arg0.getRequestURI())) {
             return true;
         }
 
