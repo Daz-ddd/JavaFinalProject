@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-
 @Controller
 public class LoginController {
 
@@ -33,6 +32,7 @@ public class LoginController {
 
     @RequestMapping("/ensure")
     public String ensure(String username, String password, HttpServletResponse response) throws IOException {
+        System.out.println(username + password);
         UserInfo userInfo = userRepository.findByUsername(username);
         if (password.equals(userInfo.getPassword())) {
             return "redirect:/query";
@@ -42,7 +42,6 @@ public class LoginController {
             out.print("<script type='text/javascript'>alert('密码错误或改用户不存在!');</script>");
             return "login";
         }
-
     }
 
     @RequestMapping("/register")
@@ -53,13 +52,11 @@ public class LoginController {
         PrintWriter out = response.getWriter();
         out.print("<script type='text/javascript'>alert('注册成功!');</script>");
         return "login";
-
     }
 
     @RequestMapping("/query")
-    public String submit(Model model) {
-        model.addAttribute("nn", "hhh");
-        return "login";
+    public String query(Model model) {
+        model.addAttribute("dayMoney", 10000);
+        return "index";
     }
-
 }
